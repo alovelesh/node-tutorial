@@ -48,6 +48,14 @@ app.get('/about',(req,res)=>{
 	})
 })
 
+app.get('/projects',(req,res)=>{
+	res.render('projects.hbs', {
+		content:'Some content about project page!',
+		createdBy : 'Lovelesh Agrawal'/*,
+		date:new Date().getFullYear()*/
+	})
+})
+
 app.listen(port, ()=>{
 	console.log("Server listen on port "+port);
 })
